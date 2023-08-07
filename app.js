@@ -166,6 +166,10 @@ app.post("/delete", function(req, res){
 });
 
 
+app.get("*", function (req, res) {
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
 
 
 app.get("/about", function(req, res){
